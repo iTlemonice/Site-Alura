@@ -1,0 +1,183 @@
+:root{  /*NESSE CÓDIGO, A GENTE CRIA UMA VARIÁVEL EM CSS, E DEPOIS A GENTE DÁ O NOME PARA NOSSA VARIÁVEL E SUA ESPECIFICAÇÃO.*/
+    --branco-principal: #FFFFFF; 
+    --cinza-secunario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-fundo: #00030C;
+    --cor-textos: #F9F9F9;
+    --fonte-principal: 'Inter';
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{   /*A GENTE MODIFICA O QUE MAIS É REPETIDO, E DOPOIS NO FINAL, A GENTE MUDA SOMENTE AS PECULIARIDADES, A GENTE FAZ ISSO TAMBÉM, ADICIONANDO SEMPRE DUAS CLASSES PARA UM OBEJTO, ASSIM, A GENTE CONSEGUE FAZER UMA MODIFICAÇÃO SOMENTE UMA VEZ, E DEPOIS A GENTE MUDA AS PECULIARIDADES, COM É FEITO COM O BOTÃO.*/
+    background-color: var(--cor-fundo);
+    color: var(--branco-principal); /*ESSE COLOR FARÁ COM QUE A GENTE MUDE SOMENTE A COR DOS TEXTOS, SEM PRECISAR MUDAR TODA HORA DEPOIS QUE CRIARMOS MAIS TEXOS.*/
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.principal{
+    background-image: url("../img/Background.png"); /*SEMPRE QUE A IMAGEM NÃO FOR DE GRANDE IMPORTÂNCIA PARA O NOSSO USUÁRIO, A GENTE COLOCA ELA AQUI NO CSS, QUANDO A IMAGEM FOR APENAS DECORATIVA.*/
+    background-repeat: no-repeat;   /*NÃO REPETIR A IMAGEM DEBAIXO.*/
+    background-size: contain;   /*PREENCHER TODA A NOSSA SECTION, NO CASO.*/
+    align-items: center;    /*NESSE ALIGN, ELE FUNCIONA DA SEGUINTE FORMA, COMO A GENTE COLOCOU ESSE NOSSO 'CONTAINER' COMO GRID, E DEPOIS A GENTE DISSE QUE O DRIG É POR COLUNA 
+                            NO 'GRID-TEMPLATE-COLUMNS', O ALIGN-ITENS, ALINHA OS OBJETOS NO CENTRO DO CASO, NO CENTRO DA COLUNA, SE A GENTE ESTIVESSE COM O GRID SEM ESTAR SETADO 
+                            COMO COLUNA, A GENTE TERIA ALINHADO NO CENTRO DE UMA LINHA. MEIO COMPLICADO DE ENTENDER, PORÉM, ESTÁ NO VIDEO (ALINHAMENTOS DO PRATICANDO HMTL E CSS).*/
+    text-align: center;
+}
+
+.container{
+    height: 100vh;  /*viewport height, ou seja, estamos usando a altura que nosso dispositivo tem.*/
+    display: grid;  /*SEPARA TODOS OS ELEMENTOS EM VÁRIAS PARTES DIFERENTES. PORÉM, NÓS COLOCAMOS DENTRO DO NOSSO SECTION CONTAINER UMA DIV, PARA QUE OS NOSSOS ELEMENTOS NÃO FIQUEM TODOS SEPARADOS.*/
+    grid-template-columns: 50% 50%; /*A GENE CONSEGUE SEPARAR POR COLUNAS, DIVIDINDO A PORCENTAGEM DE CADA COLUNA, COMO A GENTE QUER TER DUAS COLUNAS E QUE ELAS FIQUEM DIVIDIDAS NO MEIO DO SITE, A GENTE COLCOU AS DUAS COMO 50%, PORÉM, A GENTE PODE MUDAR ISSO.*/
+                            /*O GRID TEMPLATE, A GENTE MUDA O NOSSO GRID, QUE ANTES ERA DE LINHA, AGORA É DE COLUNA, ENTÃO A GENTE FEZ A MUDANÇA DE TAMANHO.*/
+}
+
+.container__caixa{
+    margin: 0 6em;
+}
+
+.container__titulo{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__botao{
+    background-color: var(--botao-azul);
+    border-radius: 8px; /*AQUI A GENTE ARREDONDA AS BORDAS DO NOSSO BACKGROUND.*/
+    padding: 1em; /*1em SIGNIFICA QUE O TAMANHO SERÁ REFERENTE AO NOSSO TAMANHO DE TEXTO.*/
+    color: var(--branco-principal);
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1em;
+    transition: 340ms;
+}
+
+.container__botao:hover{
+    background-color: #0e468b;
+    transform:scale(98%)
+}
+
+.botao_secundario:hover{
+    background-color: rgb(94, 107, 121);
+}
+
+.botao_secundario{
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.container__aviso{
+    font-size: 12px;
+    color: var(--cinza-secunario);
+}
+
+.container__imagem{
+    margin: 1em 0 2em 0;
+}
+
+.secundario{
+    align-items: center;
+    margin: 0 15em;
+}
+
+.imagem_plataformas{
+    width: 80%;
+}
+
+.titulo_plataformas{
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 0.2em;
+}
+
+.container__frase{
+    color: var(--cinza-secunario);
+    font-weight: 400;
+}
+
+.botao_combo{
+    display: inline-block;  /*A GENTE DEIXA INLINE-BLOCK, QUE IRÁ PEGAR SOMENTE O ESPAÇO DELE, SEM OCUPAR A LINHA TODA, MAS AO MESMO TEMPO, SEM FAZER COM QUE FIQUE COLADO EM OUTRO ELEMENTO.*/
+}
+
+.frase_combo{
+    text-align: left;
+    margin: 0 3em 1em 0;
+    line-height: 24px;
+}
+
+.imagem_combo{
+    position: relative;
+    margin: 0 auto;
+}
+
+.imagem_animacao{
+    transition: 340ms;
+}
+
+.imagem_animacao:hover{
+    transform: scale(102%);
+}
+
+.imagem_segunda{
+    position: absolute;
+    top: 10%;
+    right: -8%;
+    transition: 340ms;
+}
+
+.imagem_segunda:hover{
+    transform: scale(102%);
+}
+
+.dispositivos{
+    text-align: center;
+}
+
+.dispositivos__lista{
+    display: flex;
+    justify-content: center;    /*CENTRALIZA TUDO O QUE ESTIVER NO NOSSO FLEX DESSA NOSSA LISTA ESPECÍFICA.*/
+    list-style-type: none;
+    margin: 5em 0 10em 0;
+}
+
+.dispositivos__titulo{
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item{
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+.rodape__lista{
+    margin: 2em;
+}
+.lista__link a{
+    text-decoration: none;
+    margin-right: 2em;
+    color: var(--branco-principal);
+}
+
+.rodape{
+    text-align: center;
+}
+
+footer p{
+    margin: 1em 20em;
+    color: var(--cinza-secunario);
+    font-size: 14px;
+}
+
+footer p:last-child{
+    margin-bottom: 10em;
+}
+
+.lista__link a:hover{
+    color: var(--botao-azul);
+}
+
