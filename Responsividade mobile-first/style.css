@@ -1,0 +1,17 @@
+@import url(styles/header.css);
+@import url(styles/banner.css);
+@import url(styles/carrosel.css);
+@import url(styles/contato.css);
+@import url(styles/rodape.css);
+
+:root {
+    --cor-fundo: #e6e6e6;
+    --cor-branca: white;
+    --cor-titulo-lista-menu: #EB9B00;
+}
+
+body {
+    background-color: var(--cor-fundo);
+}
+
+

@@ -1,0 +1,194 @@
+.cabecalho__menu-hamburguer{
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    background-image: url(../img/Menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.cabecalho{
+    background-color: var(--cor-branca);
+    display: flex;  /*FEZ COM QUE AS NOSSAS DUAS DIV CONTAINER FOSSEM UMA PARA O LADO DA OUTRA.*/
+    justify-content: space-between; /*NOS PERMITE DIVIDIR AS DUAS DIV, UMA PARA O LADO DA OUTRA, NÓS AINDA PODEMOS CONFIGURAR ESSAS MODIFICAÇÕES COLOCANDO OUTRO TIPO DE ESPAÇO.*/
+    align-items: center;
+    position: relative;
+    font-size: 16px;
+    font-family: 'Poppins', sans-seri;
+}
+
+.container{
+    display: flex;
+    padding: 0 1em;
+    align-items: center;    /*TIVE QUE ALINHAR TODOS SO CONTAINER USANDO O FLEX E DPS O CENTER, O MENU ESTAVA DENTRO DA DIV.*/
+}
+
+.container__imagem{
+    padding: 1em;
+}
+
+.lista-menu{
+    width: 50%;
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: var(--cor-branca);
+    padding: 1em;
+    box-shadow: 1px 2px 5px rgba(100,100,100,0.8);
+}
+
+.lista-menu__titulo{
+    color: #EB9B00; /*COR AMARELA DO TITULO DA LISTA MENU.*/
+    font-weight: 700;
+    font-weight: bold;
+}
+
+.lista-menu__item{
+    font-weight: 400;
+    padding-top: 1em;
+}
+
+.lista-menu__link{
+    text-decoration: none;
+    background: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%); /*PODERÍAMOS TER FEITO UMA VARIÁVEL, PORÉM A GENTE FEZ TESTES E A VAR NÃO ESTÁ FUNCIONANDO HOJE.*/
+    -webkit-background-clip: text;  /*ESSES WEBKIT, SERVEM PARA ESSAS MUDANÇAS FUNCIONAREM EM TODOS OS NAVEGADORES.*/
+    -webkit-text-fill-color: transparent;
+    background-clip: text;  /*ESSE CÓDIGO PRENDE A MUDANÇA DE BACKGROUND SOMENTE AONDE TEM TEXTO.*/
+}
+
+.container__botao:checked~.lista-menu{  /*A GENTE USA ESSE MODO, COMO SE FOSSE UMA CONDICIONAL NO CSS, OBVIO QUE NÃO CHEGA NEM PERTO, PORÉM, A GENTE CONSEGUE BRINCAR.*/
+    display: block;                     /*A GENTE ESTÁ DIZENDO O SEGUINTE PARA O NAVEGADOR. SE O CONTAINER__BOTAO ESTIVER CHECKED, A GENTE PEGA A LISTA-MENU, E FAZ ALGUMA COISA, QUE NO CASO É MOSTRAR NA TELA*/
+}
+
+.container__botao:checked~.container_rotulo>.cabecalho__menu-hamburguer{
+    background: #002F52;
+}
+
+.container__botao{
+    display: none;
+}
+
+/*QUEREMOS DESATIVAR ESSE TITULO QUANDO A TELA FOR MENOR QUE 1024PX*/
+.container__titulo{
+    display: none;
+}
+
+.opcoes{
+    display: none;
+}
+
+/*MEDIA QUERIE. PODEMOS PROCURAR OUTROS MEDIA TYPES EM VEZ DE SCREEN.*/
+@media screen and (min-width:  1024px) {
+    .container__titulo, .container__titulo-negrito{
+        font-family: 'Josefin Sans';
+        font-size: 30px;
+        padding-top: 10px;
+    }
+
+    .container__titulo{
+        font-weight: 400;
+        display: block;
+    }
+
+    .container__titulo-negrito{
+        font-weight: 700;
+    }
+
+    .opcoes{
+        display: flex;
+    }
+
+    .opcoes_item{
+        margin: 0 2em;
+        text-transform: uppercase;
+        font-family: 'Poppins';
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    .opcoes_link{
+        text-decoration: none;
+        color: black;
+    }
+
+    .container__imagem-transparente{
+        display: none;
+    }
+
+    .cabecalho__menu-hamburguer{
+        display: none;
+    }
+
+    .opcoes_botao:checked~.lista-menu{
+        display: block;
+        width: auto;
+        margin-left: 1em;
+    }
+
+    .opcoes_botao{
+        display: none;
+    }
+
+    .opcoes_botao:checked~.opcoes_rotulo>.opcoes_item{
+        background-color: #002F52;
+        color: white;
+    }
+
+    .lista-menu{
+        padding: 0;
+        left: 16.2%;
+    }
+
+    .opcoes_item{
+        padding: 2em 1em;
+    }
+
+    .lista-menu__item{
+        padding: 1em;
+    }
+
+    .lista-menu__item:hover{
+        background: #002F52;
+    }
+
+    .lista-menu__item:hover>.lista-menu__link{
+        -webkit-text-fill-color: white; /*ME PERMITE COLOCAR A COR POR CAUSA DA COR DO BACKGROUND DELE.*/
+    }
+
+}
+
+.container_texto{
+    display: none;
+}
+
+@media screen and (min-width: 1728px) {
+    .container_texto{
+        display: block;
+        font-family: 'Poppins';
+    }
+
+    .container_link{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #000;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .cabecalho{
+        padding: 0 2em;
+    }
+
+    .opcoes{
+        margin-right: auto;
+    }
+
+}
+
+
+
+
+
+

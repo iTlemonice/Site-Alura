@@ -1,0 +1,98 @@
+.contato{
+    background-color: white;
+    padding: 1em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contato__titulo{
+    background: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.contato__texto{
+    background: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 300;
+    font-size: 16px;
+    margin: 1em 0;
+    line-height: 1.5em;
+}
+
+.contato__email{
+    padding: 0.8em;
+    width: 90%;
+    background-color: transparent;
+    border: 1px solid #002F52;
+    border-radius: 24px;
+    color: white;
+    background: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contato__email::placeholder{
+    background-image: url(../img/Vector\ \(1\).svg);
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+    padding-left: 2em;  /*QUANDO A GENTE USA O PADDING AQUI DENTRO, A GENTE VAI DANDO UM ESPAÇAMENTO DO TEXTO DA BORDA DELE, ABRINDO ESPAÇO PARA A IMAGEM QUE A GENTE COLOCOU.*/
+}
+
+@media screen and (min-width: 1024px) {
+    .contato{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .contato_descricao{
+        width: 30%;
+    }
+
+    .contato__email{
+        width: 30%;
+        margin-left: 6em;
+    }
+    
+    .contato__titulo{
+        font-size: 24px;
+    }
+
+    .contato__texto{
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (min-width: 1728px) {
+    .contato{
+        margin: 2em 15vw;
+    }
+
+    .contato__titulo{
+        font-size: 24px;
+    }
+
+    .contato__texto{
+        font-size: 16px;
+    }
+
+    .contato_descricao{
+        width: 33%;
+    }
+
+}
+
+
+
+
+
+
+
+

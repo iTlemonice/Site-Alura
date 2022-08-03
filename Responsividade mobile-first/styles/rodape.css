@@ -1,0 +1,66 @@
+.rodape{
+    padding: 1em;
+}
+
+.rodape__titulo{
+    font-family: 'Poppins', sans-serif;
+}
+
+.lista-rodape{
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .lista-rodape{
+        display: block;
+    }    
+
+    .rodape{
+        display: flex;
+        font-family: 'Poppins';
+        justify-content: space-around;/*EU DIVIDO TODAS AS PARTES DO MEU DISPLAY FLEX IGUALMENTE*/
+        margin-bottom: 2em;
+    }
+
+    .rodape__titulo{
+        font-size: 24px;
+    }
+
+    .lista-rodape_titulo{
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 2em;
+        color: #858585;
+        text-transform: uppercase;
+    }
+
+    .lista-rodape_item{
+        display: flex;
+        align-items: center;    /*PARA EU PODER ALINHAR DESSA MANEIRA QUE EU QUIS, EU TIVE QUE TRANSFORMAR OS ITENS EM DISPLAY FLEX.*/
+        margin-top: 1em;
+    }
+
+    .lista-rodape_link{
+        text-decoration: none;
+        color: #474646;
+        margin-left: .8em;
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (min-width: 1728px) {
+    .lista-rodape{
+        border-left: 1px solid #858585;
+        padding-left: 1em;
+    }
+}
+
+
+
+
+
+
+
+
+
